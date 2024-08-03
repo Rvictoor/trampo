@@ -28,27 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tbvalor1 = new TextBox();
-            tbvalor2 = new TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            txvalor1 = new TextBox();
+            txvalor2 = new TextBox();
             lblvalor1 = new Label();
             lblvalor2 = new Label();
             lbtotal = new Label();
             lbresultado = new Label();
+            btnsoma = new Button();
+            btnmultiplicacao = new Button();
+            btnsub = new Button();
             SuspendLayout();
             // 
-            // tbvalor1
+            // txvalor1
             // 
-            tbvalor1.Location = new Point(103, 106);
-            tbvalor1.Name = "tbvalor1";
-            tbvalor1.Size = new Size(100, 23);
-            tbvalor1.TabIndex = 0;
+            txvalor1.Location = new Point(103, 106);
+            txvalor1.Name = "txvalor1";
+            txvalor1.Size = new Size(100, 23);
+            txvalor1.TabIndex = 0;
             // 
-            // tbvalor2
+            // txvalor2
             // 
-            tbvalor2.Location = new Point(103, 149);
-            tbvalor2.Name = "tbvalor2";
-            tbvalor2.Size = new Size(100, 23);
-            tbvalor2.TabIndex = 1;
+            txvalor2.Location = new Point(103, 149);
+            txvalor2.Name = "txvalor2";
+            txvalor2.Size = new Size(100, 23);
+            txvalor2.TabIndex = 1;
             // 
             // lblvalor1
             // 
@@ -76,6 +80,7 @@
             lbtotal.Size = new Size(32, 15);
             lbtotal.TabIndex = 4;
             lbtotal.Text = "Total";
+            lbtotal.Click += lbtotal_Click;
             // 
             // lbresultado
             // 
@@ -87,17 +92,51 @@
             lbresultado.Text = "...";
             lbresultado.Click += label4_Click;
             // 
+            // btnsoma
+            // 
+            btnsoma.Location = new Point(64, 266);
+            btnsoma.Name = "btnsoma";
+            btnsoma.Size = new Size(75, 23);
+            btnsoma.TabIndex = 6;
+            btnsoma.Text = "soma";
+            btnsoma.UseVisualStyleBackColor = true;
+            btnsoma.Click += btnsoma_Click;
+            // 
+            // btnmultiplicacao
+            // 
+            btnmultiplicacao.Location = new Point(217, 266);
+            btnmultiplicacao.Name = "btnmultiplicacao";
+            btnmultiplicacao.Size = new Size(92, 23);
+            btnmultiplicacao.TabIndex = 7;
+            btnmultiplicacao.Text = "multiplicacao";
+            btnmultiplicacao.UseVisualStyleBackColor = true;
+            btnmultiplicacao.Click += btnmultiplicacao_Click;
+            // 
+            // btnsub
+            // 
+            btnsub.Location = new Point(366, 269);
+            btnsub.Name = "btnsub";
+            btnsub.Size = new Size(75, 23);
+            btnsub.TabIndex = 8;
+            btnsub.Text = "subtracao";
+            btnsub.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = SystemColors.Info;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(641, 450);
+            Controls.Add(btnsub);
+            Controls.Add(btnmultiplicacao);
+            Controls.Add(btnsoma);
             Controls.Add(lbresultado);
             Controls.Add(lbtotal);
             Controls.Add(lblvalor2);
             Controls.Add(lblvalor1);
-            Controls.Add(tbvalor2);
-            Controls.Add(tbvalor1);
+            Controls.Add(txvalor2);
+            Controls.Add(txvalor1);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -106,11 +145,14 @@
 
         #endregion
 
-        private TextBox tbvalor1;
-        private TextBox tbvalor2;
+        private TextBox txvalor1;
+        private TextBox txvalor2;
         private Label lblvalor1;
         private Label lblvalor2;
         private Label lbtotal;
         private Label lbresultado;
+        private Button btnsoma;
+        private Button btnmultiplicacao;
+        private Button btnsub;
     }
 }
